@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Text;
 
-namespace Savory.CodeDom.Docker.Engine.MSTest
+namespace Panosen.CodeDom.Docker.Engine.MSTest
 {
     [TestClass]
     public class TestNpmBuildTask

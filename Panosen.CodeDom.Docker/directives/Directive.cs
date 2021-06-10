@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Savory.CodeDom.Docker
+namespace Panosen.CodeDom.Docker
 {
     public abstract class Directive
     {

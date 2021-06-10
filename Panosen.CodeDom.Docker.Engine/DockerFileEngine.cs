@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace Savory.CodeDom.Docker.Engine
+namespace Panosen.CodeDom.Docker.Engine
 {
     /// <summary>
     /// DockerFileEngine
@@ -110,7 +110,15 @@ namespace Savory.CodeDom.Docker.Engine
             {
                 return;
             }
-            codeWriter.WriteLine($"{Keywords.FROM} {fromDirective.BaseImage} AS {fromDirective.BaseImageAlias}");
+
+            codeWriter.Write($"{Keywords.FROM} {fromDirective.BaseImage}");
+
+            if (!string.IsNullOrEmpty(fromDirective.BaseImageAlias))
+            {
+                codeWriter.Write($" AS {fromDirective.BaseImageAlias}");
+            }
+
+            codeWriter.WriteLine();
         }
 
         public void GenerateCopy(CopyDirective copyFile, CodeWriter codeWriter)
